@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Ghaffar Mahar Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="progress-bar"></div>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#home" class="nav-brand">Abdul Ghaffar Mahar</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="edit-controls">
+                <button id="toggleEditModeBtn" class="button primary-button">Edit Profile</button>
+                <button id="saveChangesBtn" class="button success-button hidden">Save Changes</button>
+                <button id="discardChangesBtn" class="button error-button hidden">Discard</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero-section section-card slide-up">
+            <div class="hero-content">
+                <div class="profile-pic-container">
+                    <img id="profilePicDisplay" src="https://scontent.fkhi30-1.fna.fbcdn.net/v/t39.30808-6/326981057_542745507921226_2604059348058694024_n.jpg?_nc_cat=106&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RD3ku0wJKnUQ7kNvwEghnUX&_nc_oc=AdlZyE3_TS7dxqa7X2-eKcOhfxzmbgNpuGTLaIS2zFe3bdqx5D1xm88-LDaJWOiSjK0&_nc_zt=23&_nc_ht=scontent.fkhi30-1.fna&_nc_gid=ark78pwryaYDr_CZRKOtMg&oh=00_AfiGBmVq5FRDoJVrldXaDELjePAfe-AG13ZxOYz2El5G0Q&oe=692929CD" alt="Profile Picture" class="profile-pic fade-in">
+                    <input type="file" id="profilePicInput" accept="image/*" class="hidden">
+                    <label for="profilePicInput" class="button primary-button hidden" id="profilePicLabel">Change Picture</label>
+                </div>
+                <h1 id="profileNameDisplay" class="hero-name">Abdul Ghaffar Mahar</h1>
+                <input type="text" id="profileNameInput" class="input hero-name hidden" value="Abdul Ghaffar Mahar">
+
+                <h2 id="profileTitleDisplay" class="hero-title">Full-Stack Developer</h2>
+                <input type="text" id="profileTitleInput" class="input hero-title hidden" value="Full-Stack Developer">
+            </div>
+        </section>
+
+        <section id="about" class="section-card fade-in">
+            <h2 class="section-title">About Me</h2>
+            <p id="aboutMeText"></p>
+            <textarea id="aboutMeInput" class="input hidden" rows="8" placeholder="Tell us about yourself..."></textarea>
+        </section>
+
+        <section id="skills" class="section-card fade-in">
+            <h2 class="section-title">Skills</h2>
+            <div id="skillsList" class="skills-grid">
+                <!-- Skills will be rendered here -->
+            </div>
+            <div id="addSkillContainer" class="hidden">
+                <input type="text" id="newSkillInput" class="input" placeholder="New Skill Name">
+                <button id="addSkillBtn" class="button primary-button">Add Skill</button>
+            </div>
+        </section>
+
+        <section id="experience" class="section-card fade-in">
+            <h2 class="section-title">Work Experience</h2>
+            <div id="experienceList">
+                <!-- Experience entries will be rendered here -->
+            </div>
+            <button id="addExperienceBtn" class="button primary-button hidden add-new-item-btn">Add New Experience</button>
+        </section>
+
+        <section id="projects" class="section-card fade-in">
+            <h2 class="section-title">Projects</h2>
+            <div id="projectsList" class="projects-grid">
+                <!-- Project entries will be rendered here -->
+            </div>
+            <button id="addProjectBtn" class="button primary-button hidden add-new-item-btn">Add New Project</button>
+        </section>
+
+        <section id="contact" class="section-card fade-in">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> <span id="contactEmailDisplay"></span>
+                    <input type="email" id="contactEmailInput" class="input hidden" placeholder="Your Email">
+                </div>
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong> <a id="contactLinkedinDisplay" href="#" target="_blank"></a>
+                    <input type="url" id="contactLinkedinInput" class="input hidden" placeholder="LinkedIn URL">
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong> <a id="contactGithubDisplay" href="#" target="_blank"></a>
+                    <input type="url" id="contactGithubInput" class="input hidden" placeholder="GitHub URL">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 Abdul Ghaffar Mahar. All rights reserved.</p>
+    </footer>
+
+    <div id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
